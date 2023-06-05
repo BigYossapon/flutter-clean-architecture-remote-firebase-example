@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'package:struccleancrudexam/src/data/models/user/uuser_model.dart';
 import 'package:struccleancrudexam/src/domain/usecases/firebase_usecases/user/get_single_other_user_usecase.dart';
 
 import '../../../../domain/entities/user_entity.dart';
@@ -14,14 +15,13 @@ class GetSingleOtherUserBloc
   final GetSingleOtherUserUseCase getSingleOtherUserUseCase;
   GetSingleOtherUserBloc({required this.getSingleOtherUserUseCase})
       : super(GetSingleOtherUserInitialState()) {
-    on<GetSingleOtherUser_Event>((event, emit) {
+    on<GetSingleOtherUser_Event>((event, emit) async {
       // TODO: implement event handler
       emit(GetSingleOtherUserLoadingState());
       try {
-        final streamResponse = getSingleOtherUserUseCase.call(event.otherUid);
-        streamResponse.listen((users) {
-          emit(GetSingleOtherUserLoadedState(otherUser: users.first));
-        });
+        final Response = await getSingleOtherUserUseCase.call(event.otherUid);
+
+        emit(GetSingleOtherUserLoadedState(otherUser: Response));
       } on SocketException catch (_) {
         emit(GetSingleOtherUserFailureState());
       } catch (_) {

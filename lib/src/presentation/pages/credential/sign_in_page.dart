@@ -106,7 +106,9 @@ class _SignInPageState extends State<SignInPage> {
                       if (state is CredentialLoadingState) {
                         _Loading(context);
                       }
+
                       if (state is CredentialFailureState) {
+                        Navigator.pop(context);
                         Fluttertoast.showToast(
                             msg: "Login Failure please try again!",
                             toastLength: Toast.LENGTH_SHORT,
@@ -116,6 +118,7 @@ class _SignInPageState extends State<SignInPage> {
                             fontSize: 16.0);
                       }
                       if (state is CredentialSuccessState) {
+                        Navigator.pop(context);
                         BlocProvider.of<AuthBloc>(context).add(LoggedInEvent());
                         BlocListener<AuthBloc, AuthState>(
                             listener: (context, state) {

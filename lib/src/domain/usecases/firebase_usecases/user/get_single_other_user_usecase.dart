@@ -5,7 +5,7 @@ class GetSingleOtherUserUseCase {
   final FirebaseRepository firebaseRepository;
   GetSingleOtherUserUseCase({required this.firebaseRepository});
 
-  Stream<List<UserEntity>> call(String otheruid) {
+  Future<UserEntity> call(String otheruid) {
     return firebaseRepository.getSingleOtherUser(otheruid);
   }
 }

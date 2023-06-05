@@ -12,7 +12,7 @@ abstract class FirebaseRepository {
   // User Features
   Stream<List<UserEntity>> getUsers();
   Stream<UserEntity> getSingleUser(String uid);
-  Stream<List<UserEntity>> getSingleOtherUser(String otheruid);
+  Future<UserEntity> getSingleOtherUser(String otheruid);
 
   Future<String> getCurrentUid();
   Future<void> createUser(UserEntity user);

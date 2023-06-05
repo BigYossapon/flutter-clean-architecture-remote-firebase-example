@@ -28,7 +28,7 @@ class FirebaseRepositoryImpl extends FirebaseRepository {
   }
 
   @override
-  Stream<List<UserEntity>> getSingleOtherUser(String otheruid) =>
+  Future<UserEntity> getSingleOtherUser(String otheruid) =>
       // TODO: implement getSingleOtherUser
       firebaseRemoteDataSource.getSingleOtherUser(otheruid);
 

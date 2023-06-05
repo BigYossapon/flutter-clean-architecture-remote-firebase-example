@@ -74,14 +74,18 @@ class FirebaseRemoteDataSourceImpl extends FirebaseRemoteDataSource {
   // TODO: implement getCurrentUid
 
   @override
-  Stream<List<UserEntity>> getSingleOtherUser(String otherUid) {
-    // TODO: implement getSingleOtherUser
-    final userCollection = firebaseFirestore
-        .collection(FirebaseConst.users)
-        .where("uid", isEqualTo: otherUid)
-        .limit(1);
-    return userCollection.snapshots().map((querySnapshot) =>
-        querySnapshot.docs.map((e) => UserModel.fromSnapshot(e)).toList());
+  Future<UserEntity> getSingleOtherUser(String otherUid) async {
+    UuserModel userPersonalInfo = UuserModel();
+    await _fireStoreUserCollection
+        .where('uid', isEqualTo: otherUid)
+        .get()
+        .then((snapshot) {
+      if (snapshot.docs.isNotEmpty) {
+        QueryDocumentSnapshot<Map<String, dynamic>> snap = snapshot.docs[0];
+        userPersonalInfo = UuserModel.fromJson(snap.data());
+      }
+    });
+    return userPersonalInfo;
   }
 
   @override

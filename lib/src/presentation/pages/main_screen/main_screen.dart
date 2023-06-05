@@ -41,8 +41,8 @@ class _MainScreenState extends State<MainScreen> {
     // final userEntity = UserEntity(email: email, password: password, uid: uid);
     // BlocProvider.of<UserBloc>(context)
     //     .add(CreateUserEvent(userEntity: userEntity));
-    BlocProvider.of<GetSingleUserBloc>(context)
-        .add(GetSingleUser_Event(uid: uid));
+    BlocProvider.of<GetSingleOtherUserBloc>(context)
+        .add(GetSingleOtherUser_Event(otherUid: uid));
 
     pageController = PageController();
     super.initState();
@@ -66,10 +66,10 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<GetSingleUserBloc, GetSingleUserState>(
+    return BlocBuilder<GetSingleOtherUserBloc, GetSingleOtherUserState>(
       builder: (context, getSingleUserState) {
-        if (getSingleUserState is GetSingleUserLoadedState) {
-          final currentUser = getSingleUserState.user;
+        if (getSingleUserState is GetSingleOtherUserLoadedState) {
+          final currentUser = getSingleUserState.otherUser;
           return Scaffold(
             backgroundColor: Colors.greenAccent,
             bottomNavigationBar: CupertinoTabBar(
