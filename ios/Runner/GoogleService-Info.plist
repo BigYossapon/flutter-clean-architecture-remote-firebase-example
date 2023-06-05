@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1028911584955-vunullhai6gamkc3kv666r59u3vl45p6.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1028911584955-vunullhai6gamkc3kv666r59u3vl45p6</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>1028911584955-dr5egtvrthe624ul3a3rrlub2hmsep1k.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB372jOlLeVSAm2Qtjy9yh06vK7hla-FIk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1028911584955</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.bigyossapon.struccleancrudexam</string>
+	<key>PROJECT_ID</key>
+	<string>flutter-clean-architectu-463d9</string>
+	<key>STORAGE_BUCKET</key>
+	<string>flutter-clean-architectu-463d9.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1028911584955:ios:fb539102256a805bf9fb9e</string>
+	<key>DATABASE_URL</key>
+	<string>https://flutter-clean-architectu-463d9-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+</dict>
+</plist>

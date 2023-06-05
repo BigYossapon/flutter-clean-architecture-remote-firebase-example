@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1028911584955",
+    "firebase_url": "https://flutter-clean-architectu-463d9-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "flutter-clean-architectu-463d9",
+    "storage_bucket": "flutter-clean-architectu-463d9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1028911584955:android:56de847dc6205095f9fb9e",
+        "android_client_info": {
+          "package_name": "com.bigyossapon.struccleancrudexam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1028911584955-dr5egtvrthe624ul3a3rrlub2hmsep1k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bigyossapon.struccleancrudexam",
+            "certificate_hash": "ad13e3d54b985e91ccd6e9eb4b9bc5499477e43a"
+          }
+        },
+        {
+          "client_id": "1028911584955-eqn7jp0co9sha3d3d10bvpp9dea0sau8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtYFxCbrEXHKOfc-nhgaOMhKj1EeLUQss"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1028911584955-eqn7jp0co9sha3d3d10bvpp9dea0sau8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
